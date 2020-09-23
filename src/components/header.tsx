@@ -20,13 +20,24 @@ const NavLink = styled.a`
 
 const Nav = styled.nav`
     display: flex;
-    padding: 40px;
+    padding: 30px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 400px) {
+        #title {
+            width: 100%;
+            text-align: center;
+        }
+    }
 `;
 
-const NavLinkContainer = styled.div``;
+const NavLinkContainer = styled.div`
+    @media screen and (max-width: 400px) {
+        display: none;
+    }
+`;
 
 const Header = () => {
     return (

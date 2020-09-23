@@ -13,7 +13,8 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-    margin: 1rem auto;
+    margin: 0 auto;
+    padding: 0 30px;
     max-width: 980px;
     flex: 1 0 auto;
 `;

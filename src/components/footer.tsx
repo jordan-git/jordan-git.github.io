@@ -15,6 +15,17 @@ const FooterContainer = styled.div`
     span:first-child {
         padding-right: 2em;
     }
+
+    @media screen and (max-width: 430px) {
+        span {
+            display: block;
+        }
+
+        span:first-child {
+            padding-right: 0;
+            padding-bottom: 10px;
+        }
+    }
 `;
 
 const Footer = () => {
