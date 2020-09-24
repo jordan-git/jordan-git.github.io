@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const NavContainer = styled.section`
     display: flex;
     margin: 0 auto;
+    padding: 0 20px;
     max-width: 980px;
 `;
 
@@ -25,7 +26,7 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 540px) {
         #title {
             width: 100%;
             text-align: center;
@@ -34,7 +35,7 @@ const Nav = styled.nav`
 `;
 
 const NavLinkContainer = styled.div`
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 540px) {
         display: none;
     }
 `;
