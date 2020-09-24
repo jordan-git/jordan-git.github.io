@@ -1,48 +1,91 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Layout from '../components/layout';
 
+const Landing = styled.section`
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('./landing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        font-weight: 400;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+    }
+
+    // Button
+    button {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.5rem 2rem;
+        color: #ffffff;
+        font-size: 1.2rem;
+        font-weight: 500;
+        background: transparent;
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: background 500ms ease;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            color: #000000;
+            background: #ffffff;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        h1 {
+            font-size: 1.7rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        button {
+            font-size: 1.1rem;
+        }
+    }
+`;
+
+const scrollToContent = () => {
+    document.querySelector('#content').scrollIntoView({
+        behavior: 'smooth',
+    });
+};
+
 const Home = () => {
     return (
-        <Layout>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                pellentesque viverra massa id pellentesque. Phasellus nec
-                scelerisque lectus, eu pharetra augue. Aenean lacinia orci mi,
-                ac volutpat libero venenatis at. Fusce nec urna eu diam egestas
-                mollis. Class aptent taciti sociosqu ad litora torquent per
-                conubia nostra, per inceptos himenaeos. Nunc mattis vestibulum
-                sollicitudin. Cras tristique scelerisque libero, vitae tristique
-                erat aliquam non. Maecenas eu efficitur nunc, eu convallis leo.
-                Sed tortor sapien, interdum a tempor et, ullamcorper vitae
-                magna. Aenean sem quam, iaculis a auctor non, ullamcorper at
-                purus. Sed vulputate mattis vestibulum. Proin facilisis neque
-                nulla, eu malesuada felis rhoncus eu. Pellentesque sodales orci
-                fermentum risus fringilla, et suscipit nisl feugiat. Phasellus
-                tincidunt congue ipsum, id rhoncus elit posuere ac. Donec tempus
-                sodales erat id aliquam. Mauris sit amet varius lectus.
-            </p>
-            <p>
-                Nulla convallis porta pretium. Curabitur in consequat ipsum.
-                Aliquam tincidunt metus elementum, suscipit eros id, feugiat
-                massa. Nam ultrices pulvinar gravida. Morbi pellentesque
-                pellentesque dictum. Praesent imperdiet massa vel orci
-                condimentum tristique. Cras lacinia, mi a mattis porta, odio
-                turpis aliquam nunc, eu aliquam est augue sit amet nisi. Aliquam
-                erat volutpat. Donec ultricies euismod vulputate.
-            </p>
-            <p>
-                Morbi interdum vel enim a cursus. Phasellus suscipit nunc eget
-                sollicitudin mattis. Integer lectus justo, mollis non quam a,
-                pellentesque maximus tortor. Morbi dapibus diam sed lacus
-                volutpat, nec ornare nisl ornare. Aenean id dui ornare,
-                porttitor ante non, elementum purus. Nullam sapien tortor,
-                hendrerit ac ultrices sed, rhoncus vitae leo. Fusce hendrerit
-                ipsum sit amet elit aliquam dapibus. Duis vestibulum tincidunt
-                enim nec pharetra. Donec tempus urna ac justo tincidunt, id
-                tincidunt eros pharetra. Sed id nulla eget felis mollis tempus.
-            </p>
-        </Layout>
+        <>
+            <Landing>
+                <h1>Jordan Quinlan</h1>
+                <h2>Third Year Computing Student</h2>
+                <button onClick={scrollToContent}>View Portfolio</button>
+            </Landing>
+            <Layout>
+                <h1>Welcome to my website!</h1>
+            </Layout>
+        </>
     );
 };
 

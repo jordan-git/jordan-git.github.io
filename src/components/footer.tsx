@@ -5,7 +5,7 @@ const FooterContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     margin: 0 auto;
     max-width: 980px;
     text-align: center;

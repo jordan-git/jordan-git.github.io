@@ -14,14 +14,14 @@ const Container = styled.div`
 
 const Content = styled.div`
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 30px;
     max-width: 980px;
     flex: 1 0 auto;
 `;
 
 const Layout = ({ children }) => {
     return (
-        <Container>
+        <Container id="content">
             <Header />
             <Content>{children}</Content>
             <Footer />

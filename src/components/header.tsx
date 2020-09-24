@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const NavContainer = styled.section`
     display: flex;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     max-width: 980px;
 `;
 
@@ -27,7 +27,7 @@ const Nav = styled.nav`
     justify-content: space-between;
 
     @media screen and (max-width: 540px) {
-        #title {
+        #logo {
             width: 100%;
             text-align: center;
         }
@@ -45,13 +45,13 @@ const Header = () => {
         <header>
             <NavContainer>
                 <Nav>
-                    <a id="title" href="/">
+                    <a id="logo" href="/">
                         jordan quinlan
                     </a>
                     <NavLinkContainer>
                         <NavLink href="/">home</NavLink>
-                        <NavLink href="/about">about</NavLink>
                         <NavLink href="/projects">projects</NavLink>
+                        <NavLink href="/about">about</NavLink>
                     </NavLinkContainer>
                 </Nav>
             </NavContainer>

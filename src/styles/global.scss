@@ -6,10 +6,13 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 20px;
+}
+
 body {
     background: #fafbfc;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
 }
 
 a {
@@ -17,11 +20,16 @@ a {
     text-decoration: none;
 }
 
-a:not(#title):hover {
+a:not(#logo):hover {
     transition: 0.2s;
     color: #6fb2e8 !important;
 }
 
 a:visited {
     color: inherit;
+}
+
+footer {
+    color: white;
+    background: #505050;
 }
