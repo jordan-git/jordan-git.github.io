@@ -1,0 +1,14 @@
+ul {
+    transform: translateX(100%);
+}
+
+@media screen and (max-width: 540px) {
+    .nav-open {
+        transform: translateX(0);
+    }
+}
+
+#menu li {
+    text-align: center;
+    padding: 20px;
+}

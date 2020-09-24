@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import '../styles/header.scss';
-
 const NavContainer = styled.section`
     display: flex;
     margin: 0 auto;
@@ -27,6 +25,8 @@ const Nav = styled.nav`
     justify-content: space-between;
 
     @media screen and (max-width: 540px) {
+        padding: 30px 20px;
+
         #logo {
             width: 100%;
             text-align: center;
