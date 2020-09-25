@@ -15,7 +15,15 @@ module.exports = {
             resolve: 'gatsby-plugin-offline',
             options: {
                 precachePages: ['/', '/projects', '/about'],
+                // appendScript: require.resolve('src/scripts/custom-sw.ts'),
             },
         },
     ],
+    siteMetadata: {
+        title: 'Jordan Quinlan',
+        titleTemplate: '%s',
+        description: `Jordan Quinlan's website.`,
+        url: 'https://jordan-git.github.io',
+        image: 'favicon.svg',
+    },
 };

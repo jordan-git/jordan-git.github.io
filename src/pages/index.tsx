@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SEO from '../components/seo';
 import Layout from '../components/layout';
 
 const Landing = styled.section`
@@ -77,6 +78,7 @@ const scrollToContent = () => {
 const Home = () => {
     return (
         <>
+            <SEO />
             <Landing id="landing">
                 <h1>Jordan Quinlan</h1>
                 <h2>Third Year Computing Student</h2>
