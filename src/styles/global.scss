@@ -29,7 +29,21 @@ a:visited {
     color: inherit;
 }
 
+.active {
+    color: red;
+}
+
+header,
 footer {
     color: white;
-    background: #505050;
+    background: #1b242f;
+}
+
+h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+p {
+    padding: 10px;
 }

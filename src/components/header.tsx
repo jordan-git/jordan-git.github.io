@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const NavContainer = styled.section`
@@ -8,7 +9,7 @@ const NavContainer = styled.section`
     max-width: 980px;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled((props) => <Link {...props} activeClassName="active" />)`
     flex: 1;
     text-align: right;
 
@@ -45,13 +46,12 @@ const Header = () => {
         <header>
             <NavContainer>
                 <Nav>
-                    <a id="logo" href="/">
+                    <Link id="logo" to="/">
                         jordan quinlan
-                    </a>
+                    </Link>
                     <NavLinkContainer>
-                        <NavLink href="/">home</NavLink>
-                        <NavLink href="/projects">projects</NavLink>
-                        <NavLink href="/about">about</NavLink>
+                        <NavLink to="/projects">projects</NavLink>
+                        <NavLink to="/about">about</NavLink>
                     </NavLinkContainer>
                 </Nav>
             </NavContainer>

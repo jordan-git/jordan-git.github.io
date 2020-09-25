@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Icons from './images/icons';
+
 const FooterContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -44,29 +46,7 @@ const Footer = () => {
         <footer>
             <FooterContainer>
                 <div>&copy; Jordan Quinlan 2020</div>
-                <IconContainer>
-                    <a
-                        href="https://www.linkedin.com/in/jordan-quinlan/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img height="44" src="/icon-linkedin.webp" />
-                    </a>
-                    <a
-                        href="https://github.com/jordan-git"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img height="44" src="/icon-github.webp" />
-                    </a>
-                    <a
-                        href="mailto:jordanquinlan734@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <img height="44" src="/icon-mail.webp" />
-                    </a>
-                </IconContainer>
+                <Icons />
             </FooterContainer>
         </footer>
     );
