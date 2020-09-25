@@ -6,6 +6,12 @@ module.exports = {
         'gatsby-plugin-sharp',
         'gatsby-plugin-offline',
         {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                icon: 'src/images/icons/favicon.svg',
+            },
+        },
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 path: `${__dirname}/src/images/`,

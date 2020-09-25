@@ -19,21 +19,21 @@ const IconContainer = styled.div`
 const Icons = () => {
     const query = useStaticQuery(graphql`
         query {
-            linkedin: file(relativePath: { eq: "icon-linkedin.webp" }) {
+            linkedin: file(relativePath: { eq: "icons/linkedin.webp" }) {
                 childImageSharp {
                     fixed(width: 44, height: 44) {
                         ...GatsbyImageSharpFixed
                     }
                 }
             }
-            github: file(relativePath: { eq: "icon-github.png" }) {
+            github: file(relativePath: { eq: "icons/github.webp" }) {
                 childImageSharp {
                     fixed(width: 44, height: 44) {
                         ...GatsbyImageSharpFixed
                     }
                 }
             }
-            mail: file(relativePath: { eq: "icon-mail.webp" }) {
+            mail: file(relativePath: { eq: "icons/mail.webp" }) {
                 childImageSharp {
                     fixed(width: 44, height: 44) {
                         ...GatsbyImageSharpFixed
