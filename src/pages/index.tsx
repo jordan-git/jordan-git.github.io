@@ -77,7 +77,7 @@ const scrollToContent = () => {
 const Home = () => {
     return (
         <>
-            <Landing>
+            <Landing id="landing">
                 <h1>Jordan Quinlan</h1>
                 <h2>Third Year Computing Student</h2>
                 <button onClick={scrollToContent}>View Portfolio</button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import styled from 'styled-components';
 
 const NavContainer = styled.section`
@@ -41,14 +41,28 @@ const NavLinkContainer = styled.div`
     }
 `;
 
+const LogoSpan = styled.span`
+    cursor: pointer;
+`;
+
+const returnToTop = () => {
+    const landing = document.querySelector('#landing');
+
+    if (landing === null) navigate('/');
+    else
+        landing.scrollIntoView({
+            behavior: 'smooth',
+        });
+};
+
 const Header = () => {
     return (
         <header>
             <NavContainer>
                 <Nav>
-                    <Link id="logo" to="/">
+                    <LogoSpan id="logo" onClick={returnToTop}>
                         jordan quinlan
-                    </Link>
+                    </LogoSpan>
                     <NavLinkContainer>
                         <NavLink to="/projects">projects</NavLink>
                         <NavLink to="/about">about</NavLink>
