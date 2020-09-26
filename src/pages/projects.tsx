@@ -53,7 +53,7 @@ const getCategories = (): string[] => {
 
 const Projects = () => {
     const [projects, setProjects] = useState(projectData);
-    const categories = getCategories();
+    const categories = getCategories().sort();
 
     const filterProjects = (category: string | null) => {
         if (category === null) return setProjects(projectData);
