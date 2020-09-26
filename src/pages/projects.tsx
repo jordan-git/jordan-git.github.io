@@ -75,7 +75,8 @@ const Projects = () => {
             <SEO />
             <ProjectHeader>Projects</ProjectHeader>
             <ProjectDescription>
-                Here is a list of all the projects I have created.
+                Here is a list of all the projects I have created. Click on a
+                project for more information.
             </ProjectDescription>
             <CategoryBox
                 categories={categories}

@@ -4,6 +4,7 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
+        'gatsby-transformer-remark',
         // 'gatsby-plugin-offline',
         // 'gatsby-plugin-layout',
         {
@@ -25,6 +26,13 @@ module.exports = {
         //         // appendScript: require.resolve('src/scripts/custom-sw.ts'),
         //     },
         // },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `project-pages`,
+                path: `${__dirname}/src/data/markdown/projects`,
+            },
+        },
     ],
     siteMetadata: {
         title: 'Jordan Quinlan',

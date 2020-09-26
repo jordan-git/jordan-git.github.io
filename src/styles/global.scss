@@ -16,11 +16,14 @@ body {
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
-a:not(#logo):hover {
+header a {
+    color: white;
+}
+
+header a:not(#logo):hover {
     transition: 0.2s;
     color: #6fb2e8 !important;
 }

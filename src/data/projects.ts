@@ -11,6 +11,7 @@ export const projectData = [
             'MySQL',
             'Node',
         ],
+        post: 'soundtube',
     },
     {
         title: 'TypeScript MERN To Do Application',
@@ -25,26 +26,30 @@ export const projectData = [
             'React',
             'Node',
         ],
+        post: 'todo',
     },
     {
         title: 'World of Tanks TypeScript API Wrapper (WIP)',
         description: `A wrapper for WarGaming's API in TypeScript`,
         categories: ['TypeScript', 'Node'],
+        post: 'world-of-tanks-api',
     },
     {
         title: 'Docstring Generator',
         description: `A Visual Studio Code extension for generating docstrings.`,
         categories: ['TypeScript', 'Node'],
+        post: 'docstring-generator',
     },
     {
         title: 'Manga Downloader',
         description: `Search for and download the latest manga through command line.`,
         categories: ['Python'],
+        post: 'manga-downloader',
     },
     {
         title: 'Bank System',
         description: `A bank GUI that supports basic banking features.`,
         categories: ['Java', 'Netbeans'],
+        post: 'bank-system',
     },
 ];
-

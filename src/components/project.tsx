@@ -1,13 +1,16 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import { navigate } from 'gatsby';
 
 interface ProjectProps {
     title: string;
     description: string;
     categories: Array<string>;
+    post?: string;
 }
 
 const ProjectContainer = styled.div`
+    cursor: pointer;
     padding: 5px;
     margin: 10px 15px;
     min-height: 150px;
@@ -51,9 +54,13 @@ const Project: FunctionComponent<ProjectProps> = ({
     title,
     description,
     categories,
+    post,
 }) => {
+    const handleClick = (event: React.MouseEvent<HTMLDivElement>) =>
+        navigate(`/projects/${post}`);
+
     return (
-        <ProjectContainer>
+        <ProjectContainer onClick={handleClick}>
             <Title>{title}</Title>
             <Description>{description}</Description>
             <CategoryContainer>
