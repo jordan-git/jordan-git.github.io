@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Project from '../components/project';
 import CategoryBox from '../components/category-box';
 
-import ProjectData from '../data/projects';
+import projectData from '../data/projects';
 
 const ProjectHeader = styled.h1`
     margin: 0 auto 10px;
@@ -40,12 +40,12 @@ const ProjectContainer = styled.section`
 `;
 
 const Projects = () => {
-    const [projects, setProjects] = useState(ProjectData);
+    const [projects, setProjects] = useState(projectData);
 
     let categories = [];
 
     // Create an array containing every category
-    for (const project of ProjectData) {
+    for (const project of projectData) {
         categories = [...categories, ...project.categories];
     }
 
@@ -53,10 +53,10 @@ const Projects = () => {
     categories = [...new Set(categories)];
 
     const filterProjects = (category: string | null) => {
-        if (category === null) return setProjects(ProjectData);
+        if (category === null) return setProjects(projectData);
 
         const filteredProjects = [];
-        ProjectData.map((project) => {
+        projectData.map((project) => {
             let matchesCategory = false;
             for (const projectCategory of project.categories) {
                 if (projectCategory === category) matchesCategory = true;
