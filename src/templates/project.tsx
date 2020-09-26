@@ -7,11 +7,8 @@ import SEO from '../components/seo';
 
 const BreadcrumbContainer = styled.div`
     a {
-        color: black;
-    }
-
-    a:hover {
         text-decoration: underline;
+        color: black;
     }
 `;
 
