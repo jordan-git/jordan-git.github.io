@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0a8a5e519e7acdeaa27d.js"
+    "url": "webpack-runtime-90257b65a3d08a369097.js"
   },
   {
     "url": "framework-724b333f1d8feb679020.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9f31b3c169d02026a10f379988b34f0a"
+    "revision": "fd0bb2fe306d525b708b4610f9795be3"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-0097d26fbd474b34ff9b.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "54a7237be8c27850fe91e09435b7f47e"
+    "revision": "d8759825b4e4c1b55e46fb21d509ef30"
   },
   {
     "url": "polyfill-3370241ddb89d1467de6.js"
@@ -60,36 +60,36 @@ self.__precacheManifest = [
     "url": "styles-c2fe8482057191dca484.js"
   },
   {
-    "url": "aa9e765a4864eb59db3d448c1f68d9786c4adfb5-36b6415f2b155dadbdb6.js"
+    "url": "aa9e765a4864eb59db3d448c1f68d9786c4adfb5-4bca8f3b2f98bb38d7df.js"
   },
   {
     "url": "component---src-pages-index-tsx-4d6667c5431e93fecd1a.js"
   },
   {
     "url": "page-data/index/page-data.json",
-    "revision": "60721bf394a6ada4edb9e425b9a10055"
+    "revision": "416a3cb60b6645a3eddeb837588dcf9e"
   },
   {
     "url": "page-data/sq/d/1216879795.json",
     "revision": "6e404f6cfa9225a325df672f958a05da"
   },
   {
-    "url": "page-data/sq/d/1552777743.json",
-    "revision": "531c3244e9cbea69c27b75cfd2dcf032"
+    "url": "page-data/sq/d/1696144389.json",
+    "revision": "80682ed17304f1954b058f5ebb7b6913"
   },
   {
     "url": "component---src-pages-projects-tsx-ecce7ae11306fd0a76e8.js"
   },
   {
     "url": "page-data/projects/page-data.json",
-    "revision": "017eef73994d0b0d03310ec9557d8535"
+    "revision": "7e2fbbf2f8df311f98c05cd6cca378af"
   },
   {
     "url": "component---src-pages-about-tsx-9088b7f861f0c0653d59.js"
   },
   {
     "url": "page-data/about/page-data.json",
-    "revision": "70127ba322e4646dc1bc40db9c52a5da"
+    "revision": "6560e5d36e61f485dd07b324a2fe9982"
   },
   {
     "url": "manifest.webmanifest",
