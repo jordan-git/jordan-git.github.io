@@ -57,7 +57,7 @@ const Project: FunctionComponent<ProjectProps> = ({
             <Title>{title}</Title>
             <Description>{description}</Description>
             <CategoryContainer>
-                {categories.map((category) => (
+                {categories.sort().map((category) => (
                     <Category key={category}>{category}</Category>
                 ))}
             </CategoryContainer>
