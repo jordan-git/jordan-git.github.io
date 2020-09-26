@@ -3,7 +3,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const projectTemplate = require.resolve(`./src/templates/project.tsx`);
     const result = await graphql(`
         {
-            allMarkdownRemark(limit: 1000) {
+            allMarkdownRemark(
+                sort: { order: DESC, fields: [frontmatter___title] }
+                limit: 1000
+            ) {
                 edges {
                     node {
                         frontmatter {
