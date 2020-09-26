@@ -37,7 +37,7 @@ const CategoryContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 10px;
-    margin: 20px auto 0;
+    margin: auto auto 0;
 `;
 
 const Category = styled.span`
