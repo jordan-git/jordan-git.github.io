@@ -1,4 +1,4 @@
-const projectData = [
+export const projectData = [
     {
         title: 'SoundTube',
         description: `SoundTube is a social media and music sharing website.`,
@@ -48,4 +48,14 @@ const projectData = [
     },
 ];
 
-export default projectData;
+export const categories = () => {
+    let categories = [];
+
+    // Create an array containing every category
+    for (const project of projectData) {
+        categories = [...categories, ...project.categories];
+    }
+
+    // Remove duplicates and return as array
+    return [...new Set(categories)];
+};

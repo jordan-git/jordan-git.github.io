@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import SEO from '../components/seo';
@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Project from '../components/project';
 import CategoryBox from '../components/category-box';
 
-import projectData from '../data/projects';
+import { projectData, getCategories } from '../data/projects';
 
 const ProjectHeader = styled.h1`
     margin: 0 auto 10px;
@@ -42,16 +42,6 @@ const ProjectContainer = styled.section`
 const Projects = () => {
     const [projects, setProjects] = useState(projectData);
 
-    let categories = [];
-
-    // Create an array containing every category
-    for (const project of projectData) {
-        categories = [...categories, ...project.categories];
-    }
-
-    // Remove duplicates
-    categories = [...new Set(categories)];
-
     const filterProjects = (category: string | null) => {
         if (category === null) return setProjects(projectData);
 
@@ -75,7 +65,7 @@ const Projects = () => {
                 Here is a list of all the projects I have created.
             </ProjectDescription>
             <CategoryBox
-                categories={categories}
+                categories={getCategories()}
                 filterProjects={filterProjects}
             />
             <ProjectContainer>
