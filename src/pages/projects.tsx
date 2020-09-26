@@ -6,6 +6,8 @@ import Layout from '../components/layout';
 import Project from '../components/project';
 import CategoryBox from '../components/category-box';
 
+import ProjectData from '../data/projects';
+
 const ProjectHeader = styled.h1`
     margin: 0 auto 10px;
     padding: 5px;
@@ -37,63 +39,13 @@ const ProjectContainer = styled.section`
     }
 `;
 
-const myProjects = [
-    {
-        title: 'SoundTube',
-        description: `SoundTube is a social media and music sharing website.`,
-        categories: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Express',
-            'JSON',
-            'MySQL',
-            'Node',
-        ],
-    },
-    {
-        title: 'TypeScript MERN To Do Application',
-        description: `A to do application created in Typescript using the MERN Stack.`,
-        categories: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'TypeScript',
-            'MongoDB',
-            'Express',
-            'React',
-            'Node',
-        ],
-    },
-    {
-        title: 'World of Tanks TypeScript API Wrapper (WIP)',
-        description: `A wrapper for WarGaming's API in TypeScript`,
-        categories: ['TypeScript', 'Node'],
-    },
-    {
-        title: 'Docstring Generator',
-        description: `A Visual Studio Code extension for generating docstrings.`,
-        categories: ['TypeScript', 'Node'],
-    },
-    {
-        title: 'Manga Downloader',
-        description: `Search for and download the latest manga through command line.`,
-        categories: ['Python'],
-    },
-    {
-        title: 'Bank System',
-        description: `A bank GUI that supports basic banking features.`,
-        categories: ['Java', 'Netbeans'],
-    },
-];
-
 const Projects = () => {
-    const [projects, setProjects] = useState(myProjects);
+    const [projects, setProjects] = useState(ProjectData);
 
     let categories = [];
 
     // Create an array containing every category
-    for (const project of myProjects) {
+    for (const project of ProjectData) {
         categories = [...categories, ...project.categories];
     }
 
@@ -101,10 +53,10 @@ const Projects = () => {
     categories = [...new Set(categories)];
 
     const filterProjects = (category: string | null) => {
-        if (category === null) return setProjects(myProjects);
+        if (category === null) return setProjects(ProjectData);
 
         const filteredProjects = [];
-        myProjects.map((project) => {
+        ProjectData.map((project) => {
             let matchesCategory = false;
             for (const projectCategory of project.categories) {
                 if (projectCategory === category) matchesCategory = true;
