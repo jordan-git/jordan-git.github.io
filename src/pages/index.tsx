@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import SEO from '../components/seo';
@@ -71,8 +71,6 @@ const Landing = styled.section`
 
 const Home = ({ location }) => {
     const scrollToContent = () => {
-        // const landing = document.querySelector('#landing');
-
         // if (location.state !== null && location.state.hideLanding) {
         //     setHideLanding(true);
         // }

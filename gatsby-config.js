@@ -4,7 +4,7 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
-        'gatsby-plugin-offline',
+        // 'gatsby-plugin-offline',
         // 'gatsby-plugin-layout',
         {
             resolve: 'gatsby-plugin-manifest',
@@ -18,13 +18,13 @@ module.exports = {
                 path: `${__dirname}/src/images/`,
             },
         },
-        {
-            resolve: 'gatsby-plugin-offline',
-            options: {
-                precachePages: ['/', '/projects', '/about'],
-                // appendScript: require.resolve('src/scripts/custom-sw.ts'),
-            },
-        },
+        // {
+        //     resolve: 'gatsby-plugin-offline',
+        //     options: {
+        //         precachePages: ['/', '/projects', '/about'],
+        //         // appendScript: require.resolve('src/scripts/custom-sw.ts'),
+        //     },
+        // },
     ],
     siteMetadata: {
         title: 'Jordan Quinlan',

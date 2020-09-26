@@ -48,14 +48,3 @@ export const projectData = [
     },
 ];
 
-export const categories = () => {
-    let categories = [];
-
-    // Create an array containing every category
-    for (const project of projectData) {
-        categories = [...categories, ...project.categories];
-    }
-
-    // Remove duplicates and return as array
-    return [...new Set(categories)];
-};
