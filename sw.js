@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-f296dce331951b74fa97.js"
+    "url": "webpack-runtime-c1d977463c0de9a07a14.js"
   },
   {
-    "url": "framework-724b333f1d8feb679020.js"
+    "url": "framework-de237a875aa45b276a9d.js"
   },
   {
-    "url": "app-519b1cdd4381420e89db.js"
+    "url": "app-9e466fd5a609531579f1.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "deb2bf501cb7d298478f349f5aaa0d2b"
+    "revision": "d7299d7b66eb6bca9a7154a742304040"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-0097d26fbd474b34ff9b.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -48,22 +48,22 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "558593a60b06972919900598ae5b0f04"
+    "revision": "614086d42feca796b9b56065b3fa62fb"
   },
   {
-    "url": "polyfill-3370241ddb89d1467de6.js"
+    "url": "polyfill-40e9c39a6b038399b9ec.js"
   },
   {
     "url": "styles.6c2a74b70b545addd473.css"
   },
   {
-    "url": "styles-c2fe8482057191dca484.js"
+    "url": "styles-e9d24b1846c7d6eb9685.js"
   },
   {
-    "url": "aa9e765a4864eb59db3d448c1f68d9786c4adfb5-4bca8f3b2f98bb38d7df.js"
+    "url": "aa9e765a4864eb59db3d448c1f68d9786c4adfb5-3b77d45cefc3b82332a8.js"
   },
   {
-    "url": "component---src-pages-index-tsx-4d6667c5431e93fecd1a.js"
+    "url": "component---src-pages-index-tsx-8c89ccfdec855f16f02f.js"
   },
   {
     "url": "page-data/index/page-data.json",
@@ -78,14 +78,14 @@ self.__precacheManifest = [
     "revision": "80682ed17304f1954b058f5ebb7b6913"
   },
   {
-    "url": "component---src-pages-projects-tsx-b87bf216a7fe22b11333.js"
+    "url": "component---src-pages-projects-tsx-4fa0c52c5290b50269eb.js"
   },
   {
     "url": "page-data/projects/page-data.json",
     "revision": "7e2fbbf2f8df311f98c05cd6cca378af"
   },
   {
-    "url": "component---src-pages-about-tsx-9088b7f861f0c0653d59.js"
+    "url": "component---src-pages-about-tsx-d7dabd0a3f6e19b6f161.js"
   },
   {
     "url": "page-data/about/page-data.json",
@@ -185,7 +185,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-519b1cdd4381420e89db.js`))) {
+  if (!resources || !(await caches.match(`/app-9e466fd5a609531579f1.js`))) {
     return await fetch(event.request)
   }
 
