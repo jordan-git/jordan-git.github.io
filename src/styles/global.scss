@@ -16,7 +16,7 @@ body {
 }
 
 a {
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
@@ -29,14 +29,14 @@ a:visited {
     color: inherit;
 }
 
-.active {
-    color: red;
-}
-
 header,
 footer {
     color: white;
     background: #1b242f;
+}
+
+.active {
+    color: #c4d5e3 !important;
 }
 
 h1 {
