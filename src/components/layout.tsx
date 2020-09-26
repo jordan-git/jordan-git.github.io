@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import gatsby from 'gatsby';
 import styled from 'styled-components';
 
 import Header from '../components/header';
@@ -14,6 +15,8 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     padding: 30px;
     max-width: 980px;

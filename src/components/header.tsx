@@ -48,11 +48,16 @@ const LogoSpan = styled.span`
 const returnToTop = () => {
     const landing = document.querySelector('#landing');
 
-    if (landing === null) navigate('/');
-    else
-        landing.scrollIntoView({
-            behavior: 'smooth',
-        });
+    if (landing === null)
+        return navigate('/', { state: { hideLanding: true } });
+
+    if (landing.classList.contains('hide')) {
+        landing.classList.toggle('hide');
+    }
+
+    landing.scrollIntoView({
+        behavior: 'smooth',
+    });
 };
 
 const Header = () => {
@@ -64,6 +69,9 @@ const Header = () => {
                         jordan quinlan
                     </LogoSpan>
                     <NavLinkContainer>
+                        <NavLink to="/" state={{ hideLanding: true }}>
+                            home
+                        </NavLink>
                         <NavLink to="/projects">projects</NavLink>
                         <NavLink to="/about">about</NavLink>
                     </NavLinkContainer>

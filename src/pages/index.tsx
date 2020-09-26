@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import SEO from '../components/seo';
@@ -69,20 +69,26 @@ const Landing = styled.section`
     }
 `;
 
-const scrollToContent = () => {
-    document.querySelector('#content').scrollIntoView({
-        behavior: 'smooth',
-    });
-};
+const Home = ({ location }) => {
+    const scrollToContent = () => {
+        // const landing = document.querySelector('#landing');
 
-const Home = () => {
+        // if (location.state !== null && location.state.hideLanding) {
+        //     setHideLanding(true);
+        // }
+
+        document.querySelector('#content').scrollIntoView({
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <>
             <SEO />
             <Landing id="landing">
                 <h1>Jordan Quinlan</h1>
                 <h2>Third Year Computing Student</h2>
-                <button onClick={scrollToContent}>View Portfolio</button>
+                <button onClick={scrollToContent}>View Website</button>
             </Landing>
             <Layout>
                 <h1>Welcome to my website!</h1>
