@@ -21,7 +21,7 @@ const ProjectTemplate = ({ data }) => {
     return (
         <Layout>
             <SEO />
-            <section class="project-post">
+            <section className="project-post">
                 <BreadcrumbContainer>
                     <Link to="/projects">projects</Link> /{' '}
                     <Link to={`/projects/${frontmatter.breadcrumb}`}>
