@@ -90,11 +90,6 @@ const myProjects = [
 const Projects = () => {
     const [projects, setProjects] = useState(myProjects);
 
-    // const [
-    //     selectedCategory,
-    //     setSelectedCategory,
-    // ] = useState<HTMLSpanElement | null>(null);
-
     let categories = [];
 
     // Create an array containing every category
@@ -104,20 +99,6 @@ const Projects = () => {
 
     // Remove duplicates
     categories = [...new Set(categories)];
-
-    // if (selectedCategory !== null) {
-    //     const filteredProjects = [];
-    //     myProjects.map((project) => {
-    //         let matchesCategory = false;
-    //         for (const category of project.categories) {
-    //             if (category === selectedCategory.innerHTML)
-    //                 matchesCategory = true;
-    //         }
-    //         if (matchesCategory) filteredProjects.push(project);
-    //     });
-
-    //     setProjects(filteredProjects);
-    // }
 
     const filterProjects = (category: string | null) => {
         if (category === null) return setProjects(myProjects);

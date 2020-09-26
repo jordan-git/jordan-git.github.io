@@ -23,10 +23,6 @@ const CategoryRow = styled((props) => <div {...props}></div>)`
 interface CategoryBoxProps {
     categories: Array<string> | null;
     filterProjects: (category: string | null) => void;
-    // selectedCategory: {
-    //     get: HTMLSpanElement | null;
-    //     set: (value: HTMLSpanElement | 'clear' | null) => any;
-    // };
 }
 
 const Category = styled.button`
@@ -40,7 +36,6 @@ const Category = styled.button`
 const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
     categories,
     filterProjects,
-    // selectedCategory,
 }) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (event.currentTarget.innerHTML === 'Clear Selection') {
