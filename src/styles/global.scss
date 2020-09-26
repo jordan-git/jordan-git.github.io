@@ -23,7 +23,8 @@ header a {
     color: white;
 }
 
-header a:not(#logo):hover {
+header a:not(#logo):hover,
+.project-post a:hover {
     transition: 0.2s;
     color: #6fb2e8 !important;
 }

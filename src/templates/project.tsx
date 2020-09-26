@@ -1,8 +1,19 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+
+const BreadcrumbContainer = styled.div`
+    a {
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+`;
 
 const ProjectTemplate = ({ data }) => {
     const { frontmatter, html } = data.markdownRemark;
@@ -10,7 +21,13 @@ const ProjectTemplate = ({ data }) => {
     return (
         <Layout>
             <SEO />
-            <section>
+            <section class="project-post">
+                <BreadcrumbContainer>
+                    <Link to="/projects">projects</Link> /{' '}
+                    <Link to={`/projects/${frontmatter.breadcrumb}`}>
+                        {frontmatter.breadcrumb}
+                    </Link>
+                </BreadcrumbContainer>
                 <h1>{frontmatter.title}</h1>
                 <div
                     className="post-content"
@@ -29,6 +46,7 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 slug
+                breadcrumb
                 title
             }
         }
