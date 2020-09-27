@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -26,18 +27,13 @@ const FooterContainer = styled.div`
             padding-bottom: 10px;
         }
     }
-`;
 
-const IconContainer = styled.div`
-    padding-left: 20px;
-
-    a:not(:first-child) {
-        margin-left: 10px;
-    }
-
-    @media screen and (max-width: 400px) {
-        margin-top: 20px;
-        padding-left: 0;
+    div {
+        font-weight: normal;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
     }
 `;
 
@@ -45,7 +41,9 @@ const Footer = () => {
     return (
         <footer>
             <FooterContainer>
-                <div>&copy; Jordan Quinlan 2020</div>
+                <Link to="/about">
+                    <div>&copy; Jordan Quinlan 2020</div>
+                </Link>
                 <Icons />
             </FooterContainer>
         </footer>

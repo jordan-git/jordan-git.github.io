@@ -25,8 +25,7 @@ const ProjectContainer = styled.div`
     flex: 0 1 calc(100% / 2);
     box-shadow: 2px 2px #d3d3d3;
     border: 1px solid #cccccc;
-    border-radius: 6px;
-    background: #f2f2f2;
+    background: #fdfdfd;
 `;
 
 const Title = styled.h2`
@@ -51,8 +50,7 @@ const CategoryContainer = styled.div`
 
 const Category = styled.span`
     color: #111111;
-    background: ${(props) => props.color};
-    border: 1px solid black;
+    border: 1px solid ${(props) => props.color};
     font-size: 0.6rem;
     margin: 2px 6px;
     padding: 2px 8px;

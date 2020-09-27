@@ -3,13 +3,9 @@ import styled from 'styled-components';
 
 import SEO from '../components/seo';
 import Layout from '../components/layout';
+import BgImage from '../components/images/bgimage';
 
 const Landing = styled.section`
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('./landing.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -69,12 +65,8 @@ const Landing = styled.section`
     }
 `;
 
-const Home = ({ location }) => {
+const Home = () => {
     const scrollToContent = () => {
-        // if (location.state !== null && location.state.hideLanding) {
-        //     setHideLanding(true);
-        // }
-
         document.querySelector('#content').scrollIntoView({
             behavior: 'smooth',
         });
@@ -83,6 +75,7 @@ const Home = ({ location }) => {
     return (
         <>
             <SEO />
+            <BgImage />
             <Landing id="landing">
                 <h1>Jordan Quinlan</h1>
                 <h2>Third Year Computing Student</h2>

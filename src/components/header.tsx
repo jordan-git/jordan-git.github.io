@@ -25,6 +25,11 @@ const Nav = styled.nav`
     align-items: center;
     justify-content: space-between;
 
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
     @media screen and (max-width: 540px) {
         padding: 30px 20px;
 
@@ -45,7 +50,7 @@ const LogoSpan = styled.span`
     cursor: pointer;
 `;
 
-const returnToTop = () => {
+const scrollToLanding = () => {
     const landing = document.querySelector('#landing');
 
     if (landing === null) return navigate('/');
@@ -60,11 +65,10 @@ const Header = () => {
         <header>
             <NavContainer>
                 <Nav>
-                    <LogoSpan id="logo" onClick={returnToTop}>
+                    <LogoSpan id="logo" onClick={scrollToLanding}>
                         jordan quinlan
                     </LogoSpan>
                     <NavLinkContainer>
-                        <NavLink to="/">home</NavLink>
                         <NavLink to="/projects">projects</NavLink>
                         <NavLink to="/about">about</NavLink>
                     </NavLinkContainer>
