@@ -1,10 +1,10 @@
-ul#menu {
+#menu {
     transform: translateX(100%);
 }
 
 @media screen and (max-width: 540px) {
     .nav-open {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
 }
 
