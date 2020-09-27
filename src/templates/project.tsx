@@ -5,10 +5,25 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+const PostContainer = styled.section`
+    a {
+        font-weight: bold;
+        color: black;
+    }
+
+    ul {
+        padding: 10px;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+`;
+
 const BreadcrumbContainer = styled.div`
     a {
         text-decoration: underline;
-        color: black;
     }
 `;
 
@@ -18,7 +33,7 @@ const ProjectTemplate = ({ data }) => {
     return (
         <Layout>
             <SEO />
-            <section className="project-post">
+            <PostContainer className="project-post">
                 <BreadcrumbContainer>
                     <Link to="/projects">projects</Link> /{' '}
                     <Link to={`/projects/${frontmatter.breadcrumb}`}>
@@ -30,7 +45,7 @@ const ProjectTemplate = ({ data }) => {
                     className="post-content"
                     dangerouslySetInnerHTML={{ __html: html }}
                 />
-            </section>
+            </PostContainer>
         </Layout>
     );
 };

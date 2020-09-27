@@ -9,7 +9,7 @@ export const projectData = [
             'Express',
             'JSON',
             'MySQL',
-            'Node',
+            'Node.js',
         ],
         post: 'soundtube',
     },
@@ -24,20 +24,20 @@ export const projectData = [
             'MongoDB',
             'Express',
             'React',
-            'Node',
+            'Node.js',
         ],
         post: 'todo',
     },
     {
         title: 'World of Tanks TypeScript API Wrapper (WIP)',
         description: `A wrapper for WarGaming's API in TypeScript`,
-        categories: ['TypeScript', 'Node'],
+        categories: ['TypeScript', 'Node.js'],
         post: 'world-of-tanks-api',
     },
     {
         title: 'Docstring Generator',
         description: `A Visual Studio Code extension for generating docstrings.`,
-        categories: ['TypeScript', 'Node'],
+        categories: ['TypeScript', 'Node.js'],
         post: 'docstring-generator',
     },
     {
@@ -48,8 +48,8 @@ export const projectData = [
     },
     {
         title: 'Bank System',
-        description: `A bank GUI that supports basic banking features.`,
-        categories: ['Java', 'Netbeans'],
+        description: `A bank GUI that supports basic banking features built using NetBeans GUI Builder.`,
+        categories: ['Java', 'Software GUI'],
         post: 'bank-system',
     },
 ];

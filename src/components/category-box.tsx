@@ -52,7 +52,7 @@ const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
             <CategoryBoxHeader>
                 Select a category to sort projects:
             </CategoryBoxHeader>
-            <CategoryRow style={{ justifyContent: 'space-around' }}>
+            <CategoryRow style={{ justifyContent: 'flex-start' }}>
                 {Array.from(categories).map((category) => (
                     <Category onClick={handleClick}>{category}</Category>
                 ))}
