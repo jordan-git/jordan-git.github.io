@@ -62,3 +62,19 @@ export const projectData = [
         post: 'bank-system',
     },
 ];
+
+export const getCategories = (): { name: string; color: string }[] => {
+    let categories: { name: string; color: string }[] = [];
+
+    // Create an array containing every category
+    for (const project of projectData) {
+        categories = categories.concat(project.categories);
+    }
+
+    return Object.values(
+        categories.reduce(
+            (acc, cur) => Object.assign(acc, { [cur.name]: cur }),
+            {}
+        )
+    );
+};

@@ -54,7 +54,7 @@ const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
                 Select a category to sort projects:
             </CategoryBoxHeader>
             <CategoryRow style={{ justifyContent: 'flex-start' }}>
-                {Array.from(categories).map((category) => (
+                {categories.map((category) => (
                     <Category onClick={handleClick} color={category.color}>
                         {category.name}
                     </Category>

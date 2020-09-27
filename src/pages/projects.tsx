@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import Project from '../components/project';
 import CategoryBox from '../components/category-box';
 
-import { projectData } from '../data/projects';
+import { projectData, getCategories } from '../data/projects';
 
 const ProjectHeader = styled.h1`
     margin: 0 auto 10px;
@@ -39,22 +39,6 @@ const ProjectContainer = styled.section`
     }
 `;
 
-const getCategories = (): { name: string; color: string }[] => {
-    let categories: { name: string; color: string }[] = [];
-
-    // Create an array containing every category
-    for (const project of projectData) {
-        for (const category of project.categories) {
-            console.log(category);
-            categories = categories.concat(category);
-        }
-        console.log(categories);
-    }
-
-    // Remove duplicates and return as array
-    return [...new Set(categories)];
-};
-
 const Projects = () => {
     const [projects, setProjects] = useState(projectData);
     const categories = getCategories();
@@ -86,7 +70,7 @@ const Projects = () => {
                 Here is a list of all the projects I have created (so far)!
             </ProjectDescription>
             <ProjectDescription style={{ fontWeight: 'bold' }}>
-                Click on a project for more information.
+                Click on a project for more information
             </ProjectDescription>
             <CategoryBox
                 categories={categories}
