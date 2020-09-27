@@ -21,13 +21,14 @@ const CategoryRow = styled((props) => <div {...props}></div>)`
 `;
 
 interface CategoryBoxProps {
-    categories: Array<string> | null;
+    categories: Array<{ name: string; color: string }> | null;
     filterProjects: (category: string | null) => void;
 }
 
 const Category = styled.button`
     cursor: pointer;
-    border: 1px solid #a1a1a1;
+    background: #ffffff;
+    border: 1px solid ${(props) => props.color};
     font-size: 0.6rem;
     margin: 4px 3px;
     padding: 2px 8px;
@@ -54,7 +55,9 @@ const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
             </CategoryBoxHeader>
             <CategoryRow style={{ justifyContent: 'flex-start' }}>
                 {Array.from(categories).map((category) => (
-                    <Category onClick={handleClick}>{category}</Category>
+                    <Category onClick={handleClick} color={category.color}>
+                        {category.name}
+                    </Category>
                 ))}
             </CategoryRow>
             <CategoryRow style={{ justifyContent: 'flex-end' }}>

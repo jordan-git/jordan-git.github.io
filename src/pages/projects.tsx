@@ -39,12 +39,16 @@ const ProjectContainer = styled.section`
     }
 `;
 
-const getCategories = (): string[] => {
-    let categories = [];
+const getCategories = (): { name: string; color: string }[] => {
+    let categories: { name: string; color: string }[] = [];
 
     // Create an array containing every category
     for (const project of projectData) {
-        categories = [...categories, ...project.categories];
+        for (const category of project.categories) {
+            console.log(category);
+            categories = categories.concat(category);
+        }
+        console.log(categories);
     }
 
     // Remove duplicates and return as array
@@ -53,21 +57,25 @@ const getCategories = (): string[] => {
 
 const Projects = () => {
     const [projects, setProjects] = useState(projectData);
-    const categories = getCategories().sort();
+    const categories = getCategories();
 
     const filterProjects = (category: string | null) => {
-        if (category === null) return setProjects(projectData);
+        if (category === null) {
+            setProjects(projectData);
+            return projectData;
+        }
 
         const filteredProjects = [];
         projectData.map((project) => {
             let matchesCategory = false;
             for (const projectCategory of project.categories) {
-                if (projectCategory === category) matchesCategory = true;
+                if (projectCategory.name === category) matchesCategory = true;
             }
             if (matchesCategory) filteredProjects.push(project);
         });
 
         setProjects(filteredProjects);
+        return filterProjects;
     };
 
     return (
@@ -75,7 +83,7 @@ const Projects = () => {
             <SEO />
             <ProjectHeader>Projects</ProjectHeader>
             <ProjectDescription>
-                Here is a list of all the projects I have created.
+                Here is a list of all the projects I have created (so far)!
             </ProjectDescription>
             <ProjectDescription style={{ fontWeight: 'bold' }}>
                 Click on a project for more information.

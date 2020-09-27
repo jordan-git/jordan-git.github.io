@@ -2,11 +2,16 @@ import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 import { navigate } from 'gatsby';
 
+interface CategoryFormat {
+    name: string;
+    color: string;
+}
+
 interface ProjectProps {
     title: string;
     description: string;
-    categories: Array<string>;
-    post?: string;
+    categories: Array<CategoryFormat>;
+    post: string;
 }
 
 const ProjectContainer = styled.div`
@@ -44,7 +49,7 @@ const CategoryContainer = styled.div`
 `;
 
 const Category = styled.span`
-    border: 1px solid #a1a1a1;
+    border: 1px solid ${(props) => props.color};
     font-size: 0.6rem;
     margin: 2px 6px;
     padding: 2px 8px;
@@ -65,7 +70,9 @@ const Project: FunctionComponent<ProjectProps> = ({
             <Description>{description}</Description>
             <CategoryContainer>
                 {categories.sort().map((category) => (
-                    <Category key={category}>{category}</Category>
+                    <Category key={category.name} color={category.color}>
+                        {category.name}
+                    </Category>
                 ))}
             </CategoryContainer>
         </ProjectContainer>
