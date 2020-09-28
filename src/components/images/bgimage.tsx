@@ -5,13 +5,13 @@ import styled from 'styled-components';
 
 const ImageContainer = styled.div`
     position: absolute;
-
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -1;
+    width: 100%;
     height: 100vh;
-    & img {
+
+    img {
         filter: brightness(40%);
     }
 `;
@@ -34,6 +34,7 @@ const BgImage = () => {
             <Img
                 fluid={query.image.childImageSharp.fluid}
                 alt="Background image"
+                style={{ height: '100vh' }}
             />
         </ImageContainer>
     );

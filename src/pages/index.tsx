@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import BgImage from '../components/images/bgimage';
+import LandingImage from '../components/landing';
 
 const Landing = styled.section`
     height: 100vh;

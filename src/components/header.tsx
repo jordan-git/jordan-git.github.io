@@ -12,6 +12,7 @@ const NavContainer = styled.section`
 const NavLink = styled((props) => <Link {...props} activeClassName="active" />)`
     flex: 1;
     text-align: right;
+    cursor: pointer;
 
     &:not(:first-child) {
         margin-left: 20px;
@@ -46,7 +47,7 @@ const NavLinkContainer = styled.div`
     }
 `;
 
-const LogoSpan = styled.span`
+const NavLinkSpan = styled.span`
     cursor: pointer;
 `;
 
@@ -65,9 +66,9 @@ const Header = () => {
         <header>
             <NavContainer>
                 <Nav>
-                    <LogoSpan id="logo" onClick={scrollToLanding}>
+                    <NavLinkSpan id="logo" onClick={scrollToLanding}>
                         jordan quinlan
-                    </LogoSpan>
+                    </NavLinkSpan>
                     <NavLinkContainer>
                         <NavLink to="/projects">projects</NavLink>
                         <NavLink to="/about">about</NavLink>
