@@ -4,9 +4,14 @@ import styled from 'styled-components';
 import '../styles/burger.scss';
 
 const BurgerContainer = styled.div`
+    padding: 16px;
+
+    border-radius: 50%;
+    background: #ccc;
+    opacity: 0.8;
     z-index: 2;
     position: fixed;
-    bottom: 25px;
+    bottom: 90px;
     right: 25px;
     display: none;
     -webkit-user-select: none;
@@ -46,7 +51,7 @@ const BurgerMenu = styled.ul`
     width: 100%;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     position: fixed;
-    bottom: 100px;
+    bottom: 160px;
     right: 0;
     background: #ededed;
     list-style-type: none;
