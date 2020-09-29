@@ -1,4 +1,4 @@
-import { Category, Color } from './enums';
+import { Category } from './enums';
 
 export const projectData = [
     {
