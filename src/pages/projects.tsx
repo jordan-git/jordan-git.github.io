@@ -45,8 +45,8 @@ const Projects = () => {
 
     const filterProjects = (category: string | null) => {
         if (category === null) {
-            setProjects(projectData);
-            return projectData;
+            console.log('here');
+            return setProjects(projectData);
         }
 
         const filteredProjects = [];
@@ -59,7 +59,6 @@ const Projects = () => {
         });
 
         setProjects(filteredProjects);
-        return filterProjects;
     };
 
     return (
@@ -69,13 +68,13 @@ const Projects = () => {
             <ProjectDescription>
                 Here is a list of all the projects I have created (so far)!
             </ProjectDescription>
-            <ProjectDescription style={{ fontWeight: 'bold' }}>
-                Click on a project for more information
-            </ProjectDescription>
             <CategoryBox
                 categories={categories}
                 filterProjects={filterProjects}
             />
+            <ProjectDescription style={{ fontWeight: 'bold' }}>
+                Click on a project for more information
+            </ProjectDescription>
             <ProjectContainer>
                 {projects.map((projectInfo) => (
                     <Project key={projectInfo.title} {...projectInfo} />

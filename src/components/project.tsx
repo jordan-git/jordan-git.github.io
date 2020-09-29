@@ -26,6 +26,11 @@ const ProjectContainer = styled.div`
     box-shadow: 2px 2px #d3d3d3;
     border: 1px solid #cccccc;
     background: #fdfdfd;
+
+    :hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
 `;
 
 const Title = styled.h2`

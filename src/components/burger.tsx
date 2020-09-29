@@ -5,10 +5,9 @@ import '../styles/burger.scss';
 
 const BurgerContainer = styled.div`
     padding: 16px;
-
-    border-radius: 50%;
-    background: #ccc;
-    opacity: 0.8;
+    border-radius: 5px;
+    background: #ddd;
+    opacity: 0.9;
     z-index: 2;
     position: fixed;
     bottom: 90px;

@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
+import Category from './category';
 
 const CategoryBoxContainer = styled.section`
     padding: 10px 0;
@@ -25,21 +26,21 @@ interface CategoryBoxProps {
     filterProjects: (category: string | null) => void;
 }
 
-const Category = styled.button`
-    cursor: pointer;
-    background: #ffffff;
-    border: 1px solid ${(props) => props.color};
-    font-size: 0.6rem;
-    margin: 4px 3px;
-    padding: 2px 8px;
-`;
+// const Category = styled.button`
+//     cursor: pointer;
+//     background: #ffffff;
+//     border: 1px solid ${(props) => props.color};
+//     font-size: 0.6rem;
+//     margin: 4px 3px;
+//     padding: 2px 8px;
+// `;
 
 const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
     categories,
     filterProjects,
 }) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        if (event.currentTarget.innerHTML === 'Clear Selection') {
+        if (event.currentTarget.innerHTML.includes('Clear Selection')) {
             filterProjects(null);
         } else {
             filterProjects(event.currentTarget.innerText);
@@ -55,13 +56,17 @@ const CategoryBox: FunctionComponent<CategoryBoxProps> = ({
             </CategoryBoxHeader>
             <CategoryRow style={{ justifyContent: 'flex-start' }}>
                 {categories.map((category) => (
-                    <Category onClick={handleClick} color={category.color}>
-                        {category.name}
-                    </Category>
+                    <span onClick={handleClick}>
+                        <Category color={category.color}>
+                            {category.name}
+                        </Category>
+                    </span>
                 ))}
             </CategoryRow>
             <CategoryRow style={{ justifyContent: 'flex-end' }}>
-                <Category onClick={handleClick}>Clear Selection</Category>
+                <span onClick={handleClick}>
+                    <Category>Clear Selection</Category>
+                </span>
             </CategoryRow>
         </CategoryBoxContainer>
     );

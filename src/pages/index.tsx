@@ -74,7 +74,7 @@ const Home = () => {
     };
 
     return (
-        <>
+        <React.Fragment>
             <SEO />
             <BgImage />
             <Landing id="landing">
@@ -84,8 +84,104 @@ const Home = () => {
             </Landing>
             <Layout>
                 <h1>Welcome to my website!</h1>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
+                <p>
+                    Praesent vitae lobortis augue. Nam cursus odio sit amet leo
+                    placerat, ut aliquet tortor vulputate. Mauris faucibus
+                    elementum tincidunt. Donec at risus in magna convallis
+                    efficitur. Praesent egestas nisi nibh, ut accumsan mauris
+                    porttitor ac. Nullam ullamcorper ut neque ut vulputate.
+                    Maecenas malesuada augue et pellentesque porttitor. Vivamus
+                    lobortis ipsum lectus, in placerat nisi iaculis a. Aliquam
+                    vel blandit metus, ac malesuada neque. Donec sollicitudin
+                    consequat quam, ac viverra est auctor sed. Nullam nec
+                    sodales felis. Cras fermentum tellus ut mi accumsan rutrum
+                    ac id arcu. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Cras ut odio a
+                    nisi tempor faucibus. Sed commodo pulvinar ipsum, ac
+                    fringilla felis mollis at.{' '}
+                </p>
             </Layout>
-        </>
+        </React.Fragment>
     );
 };
 

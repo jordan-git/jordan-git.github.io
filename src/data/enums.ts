@@ -1,0 +1,15 @@
+export enum Color {
+    HTML = '#e44d26',
+    CSS = '#264de4',
+    JavaScript = '#264de4',
+    TypeScript = '#3178c6',
+    Java = '#e58f14',
+    Python = '#61dafb',
+    JSON = '#466df4',
+    SoftwareGUI = 'grey',
+    Express = 'green',
+    MySQL = '#47809d',
+    React = '#61dafb',
+    Nodejs = '#70a761',
+    MongoDB = '#e58f14',
+}

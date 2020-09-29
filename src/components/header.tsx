@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, navigate } from 'gatsby';
 import styled from 'styled-components';
 
@@ -61,17 +61,47 @@ const scrollToLanding = () => {
     });
 };
 
+// const handleScroll = (event: React.UIEvent<HTMLElement>) => {
+//     const header = event.currentTarget;
+//     const sticky = header.offsetTop;
+
+//     if (window.pageYOffset >= sticky) {
+//         header.classList.add('sticky');
+//     } else {
+//         header.classList.remove('sticky');
+//     }
+// };
+
 const Header = () => {
+    const [isSticky, setSticky] = useState(false);
+    const headerRef = useRef(null);
+
+    const handleScroll = () => {
+        if (headerRef.current) {
+            if (headerRef.current.getBoundingClientRect().top <= 0)
+                setSticky(true);
+            else setSticky(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', () => handleScroll);
+        };
+    }, []);
+
     return (
+        // ref={headerRef} className={`${isSticky ? 'sticky' : ''}`}
         <header>
             <NavContainer>
                 <Nav>
                     <NavLinkSpan id="logo" onClick={scrollToLanding}>
-                        jordan quinlan
+                        Jordan Quinlan
                     </NavLinkSpan>
                     <NavLinkContainer>
-                        <NavLink to="/projects">projects</NavLink>
-                        <NavLink to="/about">about</NavLink>
+                        <NavLink to="/projects">Projects</NavLink>
+                        <NavLink to="/about">About</NavLink>
                     </NavLinkContainer>
                 </Nav>
             </NavContainer>
