@@ -16,10 +16,10 @@ export class Category {
 
     private constructor(
         private readonly name: string,
-        public readonly color: any
+        private readonly color: string
     ) {}
 
-    data() {
+    toObject() {
         return { name: this.name, color: this.color };
     }
 }
