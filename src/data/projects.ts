@@ -1,17 +1,17 @@
-import { Color } from './enums';
+import { Category, Color } from './enums';
 
 export const projectData = [
     {
         title: 'SoundTube',
         description: `SoundTube is a social media and music sharing website.`,
         categories: [
-            { name: 'HTML', color: Color.HTML },
-            { name: 'CSS', color: Color.CSS },
-            { name: 'JavaScript', color: Color.JavaScript },
-            { name: 'Express', color: Color.Express },
-            { name: 'JSON', color: Color.JSON },
-            { name: 'MySQL', color: Color.MySQL },
-            { name: 'Node.js', color: Color.Nodejs },
+            Category.HTML.data(),
+            Category.CSS.data(),
+            Category.JavaScript.data(),
+            Category.Express.data(),
+            Category.JSON.data(),
+            Category.MySQL.data(),
+            Category.Nodejs.data(),
         ],
         post: 'soundtube',
     },
@@ -19,72 +19,56 @@ export const projectData = [
         title: 'TypeScript MERN To Do Application',
         description: `A to do application created in Typescript using the MERN Stack.`,
         categories: [
-            { name: 'HTML', color: Color.HTML },
-            { name: 'CSS', color: Color.CSS },
-            { name: 'JavaScript', color: Color.JavaScript },
-            { name: 'TypeScript', color: Color.TypeScript },
-            { name: 'MongoDB', color: Color.Java },
-            { name: 'Express', color: Color.Express },
-            { name: 'React', color: Color.React },
-            { name: 'Node.js', color: Color.Nodejs },
+            Category.HTML.data(),
+            Category.CSS.data(),
+            Category.JavaScript.data(),
+            Category.TypeScript.data(),
+            Category.MongoDB.data(),
+            Category.React.data(),
+            Category.Nodejs.data(),
         ],
         post: 'todo',
     },
     {
         title: 'World of Tanks TypeScript API Wrapper',
         description: `A wrapper for WarGaming's API in TypeScript`,
-        categories: [
-            { name: 'TypeScript', color: Color.TypeScript },
-            { name: 'Node.js', color: Color.Nodejs },
-        ],
+        categories: [Category.TypeScript.data(), Category.Nodejs.data()],
         post: 'world-of-tanks-api',
     },
     {
         title: 'Docstring Generator',
         description: `A Visual Studio Code extension for generating docstrings.`,
-        categories: [
-            { name: 'TypeScript', color: Color.TypeScript },
-            { name: 'Node.js', color: Color.Nodejs },
-        ],
+        categories: [Category.TypeScript.data(), Category.Nodejs.data()],
         post: 'docstring-generator',
     },
     {
         title: 'Manga Downloader',
         description: `Search for and download the latest manga through command line.`,
-        categories: [{ name: 'Python', color: Color.React }],
+        categories: [Category.Python.data()],
         post: 'manga-downloader',
     },
     {
         title: 'Bank System',
         description: `A bank GUI that supports basic banking features built using NetBeans GUI Builder.`,
-        categories: [
-            { name: 'Java', color: Color.Java },
-            { name: 'Software GUI', color: Color.SoftwareGUI },
-        ],
+        categories: [Category.Java.data(), Category.SoftwareGUI.data()],
         post: 'bank-system',
     },
     {
         title: '1',
         description: `A Visual Studio Code extension for generating docstrings.`,
-        categories: [
-            { name: 'TypeScript', color: Color.TypeScript },
-            { name: 'Node.js', color: Color.Nodejs },
-        ],
+        categories: [Category.TypeScript.data(), Category.Nodejs.data()],
         post: '1',
     },
     {
         title: '2',
         description: `Search for and download the latest manga through command line.`,
-        categories: [{ name: 'Python', color: Color.React }],
+        categories: [Category.Python.data()],
         post: '2',
     },
     {
         title: '3',
         description: `A bank GUI that supports basic banking features built using NetBeans GUI Builder.`,
-        categories: [
-            { name: 'Java', color: Color.Java },
-            { name: 'Software GUI', color: Color.SoftwareGUI },
-        ],
+        categories: [Category.Java.data(), Category.SoftwareGUI.data()],
         post: '3',
     },
 ];

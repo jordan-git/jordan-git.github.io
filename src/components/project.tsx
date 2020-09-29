@@ -67,8 +67,7 @@ const Project: FunctionComponent<ProjectProps> = ({
     categories,
     post,
 }) => {
-    const handleClick = (event: React.MouseEvent<HTMLDivElement>) =>
-        navigate(`/projects/${post}`);
+    const handleClick = () => navigate(`/projects/${post}`);
 
     return (
         <ProjectContainer onClick={handleClick}>
@@ -76,10 +75,7 @@ const Project: FunctionComponent<ProjectProps> = ({
             <Description>{description}</Description>
             <CategoryContainer>
                 {categories.sort().map((category) => (
-                    <Category
-                        key={category.name}
-                        color={category.color || 'lightgrey'}
-                    >
+                    <Category key={category.name} color={category.color}>
                         {category.name}
                     </Category>
                 ))}
